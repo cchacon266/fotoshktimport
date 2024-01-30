@@ -6,7 +6,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 // Programa con fotos reducidas
 
 async function connectToMongo() {
-  const uri = 'mongodb://127.0.0.1:27017/assets-app-test';
+  const uri = 'mongodb://127.0.0.1:27017/assets-app-grupomexico';
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   try {
@@ -38,7 +38,7 @@ async function main(client) {
     }
 
     const activoId = new ObjectId(row.id);
-    const activo = await client.db('assets-app-test').collection('assets').findOne({ _id: activoId });
+    const activo = await client.db('assets-app-grupomexico').collection('assets').findOne({ _id: activoId });
 
     if (activo) {
       for (let i = 1; i <= 6; i++) {
