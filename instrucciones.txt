@@ -1,0 +1,4 @@
+crear carpeta "fotosgm" en raiz 
+
+crear carpeta en "scr/fotosgm/customFields"
+
